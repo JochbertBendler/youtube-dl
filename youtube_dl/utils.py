@@ -1097,7 +1097,7 @@ def unified_strdate(date_str, day_first=True):
         timetuple = email.utils.parsedate_tz(date_str)
         if timetuple:
             try:
-                upload_date = datetime.datetime(*timetuple[:6]).strftime('%Y%m%d')
+                upload_date = datetime.datetime(*timetuple[:6]).strftime('%Y-%m-%d')
             except ValueError:
                 pass
     if upload_date is not None:
